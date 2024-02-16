@@ -1,0 +1,125 @@
+---
+title: "Setting Up a Python Environment"
+format:
+  revealjs:
+    slide-level: 2
+    width: 1280
+    height: 1000
+---
+
+## Introduction
+
+- This presentation will guide you through setting up a Python environment for development.
+- We will cover:
+  - Python installation
+  - Creating a virtual environment
+  - Installing Jupyter Notebook
+  - Cloning a GitHub repository
+  - Installing dependencies from a `requirements.txt` file
+  - Starting a Jupyter Notebook
+
+## Installing Python
+
+### Windows
+
+1. Download the Python installer from [python.org](https://www.python.org/downloads/).
+2. Run the installer and check "Add Python to PATH".
+3. Click "Install Now".
+
+### macOS
+
+1. Check if Python is already installed:
+   ```bash
+   python --version
+   ```
+2. If not, install Python using Homebrew:
+   ```bash
+   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+   brew install python
+
+## Creating a Virtual Environment
+
+### Windows
+
+1. Open Command Prompt.
+2. Navigate to your project directory:
+   ```cmd
+   cd path\to\your\project
+   ```
+3. Create a virtual environment:
+   ```cmd
+   python -m venv myenv
+   ```
+
+### macOS
+
+1. Open Terminal.
+2. Navigate to your project directory:
+   ```bash
+   cd /path/to/your/project
+   ```
+3. Create a virtual environment:
+   ```bash
+   python3 -m venv myenv
+   ```
+
+## Activating the Virtual Environment
+
+### Windows
+
+```cmd
+myenv\Scripts\activate
+```
+
+### macOS
+
+```bash
+source myenv/bin/activate
+```
+
+## Installing Jupyter Notebook
+
+```bash
+pip install notebook
+```
+
+## Cloning a GitHub Repository
+
+```bash
+git clone https://github.com/abigailhaddad/LMGradingRubric.git
+```
+
+## Installing Dependencies
+
+Navigate to the cloned repository and install the requirements:
+
+```bash
+cd LMGradingRubric
+pip install -r requirements.txt
+```
+
+## Starting Jupyter Notebook
+
+### From the Command Line
+
+Activate your virtual environment and start Jupyter Notebook:
+
+```bash
+jupyter notebook
+```
+
+### Using a File Browser
+
+- Double-clicking an `.ipynb` file might not open it in the virtual environment.
+- To ensure it uses the correct environment, start Jupyter Notebook from the command line and open the file from the Jupyter dashboard.
+
+## Changing the Kernel (if needed)
+
+- If your notebook is not using the kernel associated with your virtual environment:
+  - Click on "Kernel" > "Change kernel" in the Jupyter Notebook menu.
+  - Select the kernel that corresponds to your virtual environment.
+
+## Conclusion
+
+- You now have a complete Python environment set up for development.
+- You can use this environment to work on projects, run Jupyter Notebooks, and more.
