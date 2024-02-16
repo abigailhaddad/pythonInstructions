@@ -12,11 +12,13 @@ format:
 - This presentation will guide you through setting up a Python environment for development.
 - We will cover:
   - Python installation
+  - Setting an environment variable
   - Creating a virtual environment
   - Installing Jupyter Notebook
   - Cloning a GitHub repository
   - Installing dependencies from a `requirements.txt` file
   - Starting a Jupyter Notebook
+
 
 ## Installing Python
 
@@ -36,6 +38,49 @@ format:
    ```bash
    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
    brew install python
+
+
+## Setting an Environment Variable
+
+### Windows (Command Line)
+
+1. Open Command Prompt.
+2. Set the environment variable for the current session:
+   ```cmd
+   set OPENAI_KEY=your_openai_api_key
+   ```
+3. To make the variable persistent across sessions, use:
+   ```cmd
+   setx OPENAI_KEY "your_openai_api_key"
+   ```
+
+### Windows (System Properties)
+
+1. Open the Start Search, type in "env", and choose "Edit the system environment variables".
+2. In the System Properties window, click on the "Environment Variables..." button.
+3. In the Environment Variables window, click "New..." under the "User variables" section.
+4. Enter `OPENAI_KEY` as the variable name and your OpenAI API key as the variable value.
+5. Click OK to save the changes.
+
+### macOS
+
+1. Open Terminal.
+2. Open your `~/.bash_profile` or `~/.zshrc` file in a text editor:
+   ```bash
+   nano ~/.bash_profile
+   ```
+3. Add the following line to the file:
+   ```bash
+   export OPENAI_KEY="your_openai_api_key"
+   ```
+4. Save the file and exit the text editor.
+5. Apply the changes by running:
+   ```bash
+   source ~/.bash_profile
+   ```
+
+- Replace `your_openai_api_key` with your actual OpenAI API key.
+- This environment variable will be available in all new terminal sessions.
 
 ## Creating a Virtual Environment
 
