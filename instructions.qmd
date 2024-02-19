@@ -15,10 +15,10 @@ format:
   - Setting an environment variable
   - Creating a virtual environment
   - Installing Jupyter Notebook
+  - Installing Git
   - Cloning a GitHub repository
   - Installing dependencies from a `requirements.txt` file
   - Starting a Jupyter Notebook
-
 
 ## Installing Python
 
@@ -38,7 +38,6 @@ format:
    ```bash
    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
    brew install python
-
 
 ## Setting an Environment Variable
 
@@ -128,6 +127,28 @@ source myenv/bin/activate
 pip install notebook
 ```
 
+## Installing Git
+
+### Windows
+
+1. Download the Git installer from [git-scm.com](https://git-scm.com/download/win).
+2. Run the installer and follow the prompts to install Git.
+3. To verify the installation, open Command Prompt and type:
+   ```cmd
+   git --version
+   ```
+
+### macOS
+
+1. Check if Git is already installed:
+   ```bash
+   git --version
+   ```
+2. If not, install Git using Homebrew:
+   ```bash
+   brew install git
+   ```
+
 ## Cloning a GitHub Repository
 
 ```bash
@@ -161,7 +182,9 @@ jupyter notebook
 ## Changing the Kernel (if needed)
 
 - If your notebook is not using the kernel associated with your virtual environment:
-  - Click on "Kernel" > "Change kernel" in the Jupyter Notebook menu.
+  - Click on "
+
+Kernel" > "Change kernel" in the Jupyter Notebook menu.
   - Select the kernel that corresponds to your virtual environment.
 
 ## Conclusion
